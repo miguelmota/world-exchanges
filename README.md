@@ -18,10 +18,10 @@ npm install world-exchanges
 var worldExchanges = require('world-exchanges');
 
 console.log(new Date()); // "Thu May 28 2015 13:43:31 GMT-0700 (PDT)"
-console.log(worldExchanges('NYSE').isOpen()); // false
-console.log(worldExchanges('NYSE').isClosed()); // true
-console.log(worldExchanges('NYSE').getOpenTime()); // "2015-05-28T14:30:00.000Z"
-console.log(worldExchanges('NYSE').getCloseTime()); // "2015-05-28T21:00:00.000Z"
+console.log(worldExchanges('NYSE').isOpen(/* optional Date */)); // false
+console.log(worldExchanges('NYSE').isClosed(/* optional Date */)); // true
+console.log(worldExchanges('NYSE').getOpenTime()); // "2015-05-28T14:30:00.000Z" (always in GMT)
+console.log(worldExchanges('NYSE').getCloseTime()); // "2015-05-28T21:00:00.000Z" (always in GMT)
 console.log(worldExchanges('NYSE').getTimezone()); // "EST"
 console.log(worldExchanges('NYSE').getTimezoneDelta()); // "-5"
 console.log(worldExchanges('NYSE').getName()); // "New York Stock Exchange (NYSE)"
